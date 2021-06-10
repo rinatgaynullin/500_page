@@ -59,10 +59,11 @@
       margin-bottom: 25px;
     }
 
-   
-
     .server-error__content_image {
       margin-left: 151px;
+    }
+
+    .server-error__content_image > img {
       width: 892px;
     }
 
@@ -70,6 +71,12 @@
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
+      column-gap: 38px;
+    }
+
+    .arrow-image {
+      width: 52px;
+      height: 59px;
     }
 
     .server-error__text_oops {
@@ -121,6 +128,111 @@
       font-weight: 400;
     }
 
+
+    @media (max-width: 1367px) {
+      .server-error__content_image {
+        margin-left: 53px;
+       
+      }
+
+      .server-error__content_image > img {
+        width: 699px;
+      }
+      
+    }
+
+    @media (max-width: 1025px) {
+      .server-error__content {
+        min-height: 70vh;
+      }
+      
+      .server-error__content_image {
+        display: grid;
+        margin-left: 34px;
+      }
+
+      .server-error__content_image > img {
+        width: 528px;
+        align-self: flex-end;
+        margin-bottom: 10px;
+      }
+
+      .server-error__content-text {
+        margin-bottom: 0;
+        align-self: flex-end;
+      }
+
+      .server-error__text_oops {
+        margin-bottom: 22px;
+      }
+
+      .server-error__text_description {
+        margin-bottom: 10px;
+      }
+    }
+
+    @media (max-width: 950px) {
+      .server-error {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 10px 0 10px;
+      }
+      
+      .server-error__content {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .server-error__content_image {
+        display: grid;
+        margin-left: 0;
+        justify-content: center;
+        margin-bottom: 25px;
+      }
+
+      .server-error__content_image > img {
+        width: 234px;
+        align-self: center;
+        margin-bottom: 10px;
+      }
+
+      .server-error__text_oops{
+        display: flex;
+        justify-content: center;
+      }
+
+      .server-error__text_oops > img {
+        width: 93px;
+      }
+
+      .server-error__content-text {
+        margin-bottom: 0;
+        align-self: center;
+        justify-content: center;
+      }
+
+      .server-error__text_description {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+
+      .server-error__content_button {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .server-error__content_button > a > button {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .server-error__content_button > img {
+        display: none;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -153,13 +265,13 @@
 
           <div class="server-error__content_button">
             <a
-              class="self-end col col-sm-8 q-mt-lg q-mt-sm-none server-error__telegram-button-wrapper"
+              class=" server-error__telegram-button-wrapper"
               href="https://t.me/textback_status"
             >
               <button class="server-error__telegram-button"><span>Telegram</span> <i class="lab la-telegram-plane"></i></button>
             </a>
 
-            <img alt="" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTQiIGhlaWdodD0iNjEiIHZpZXdCb3g9IjAgMCA1NCA2MSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUyLjk0NTggMUM1My44MTE2IDE4LjIwODMgNDQuNjM0NSA1Mi42MjUgMSA1Mi42MjVNMSA1Mi42MjVMOC40MjA4MyA0NS4yNU0xIDUyLjYyNUw4LjQyMDgzIDYwIiBzdHJva2U9IiMzNDQ2NkMiIHN0cm9rZS1kYXNoYXJyYXk9IjUgNSIvPgo8L3N2Zz4K">
+            <img class="arrow-image" alt="" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTQiIGhlaWdodD0iNjEiIHZpZXdCb3g9IjAgMCA1NCA2MSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUyLjk0NTggMUM1My44MTE2IDE4LjIwODMgNDQuNjM0NSA1Mi42MjUgMSA1Mi42MjVNMSA1Mi42MjVMOC40MjA4MyA0NS4yNU0xIDUyLjYyNUw4LjQyMDgzIDYwIiBzdHJva2U9IiMzNDQ2NkMiIHN0cm9rZS1kYXNoYXJyYXk9IjUgNSIvPgo8L3N2Zz4K">
           </div>
           
         </div>
@@ -172,5 +284,20 @@
       </div>
     </div>
   </div>
+
+  <!-- Chatra {literal} -->
+  <script>
+    (function(d, w, c) {
+      w.ChatraID = 'B9xxgoek9tkiZ6TEs';
+      var s = d.createElement('script');
+      w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments);
+      };
+      s.async = true;
+      s.src = 'https://call.chatra.io/chatra.js';
+      if (d.head) d.head.appendChild(s);
+      })(document, window, 'Chatra');
+    </script>
+    <!-- /Chatra {/literal} -->
 </body>
 </html>
